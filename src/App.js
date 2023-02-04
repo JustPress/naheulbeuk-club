@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import {Form} from './components/form/Form.js'
+import {useState} from 'react'
+import {useEffect} from 'react'
+import {personnages} from './data/personnages.js'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function App () {
+    
+    const[hero, setHero] = useState(personnages[0])
+    
+    return(
+            <div className="App">
+                <Form hero={hero} setHero={setHero}/>
+            </div>
+        )
 }
 
 export default App;
