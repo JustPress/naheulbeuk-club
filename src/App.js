@@ -6,7 +6,7 @@ import {personnages} from './data/personnages.js'
 function App () {
     
     const[hero, setHero] = useState(personnages[0])
-    
+    const[heros, setHeros] = useState(personnages[0])
     return(
             <div className="App">
                 <Form hero={hero} setHero={setHero}/>
